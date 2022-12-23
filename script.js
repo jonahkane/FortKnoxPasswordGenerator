@@ -16,7 +16,7 @@ let digitsArray = digitsString.split("");
 let lowerArray = lowerString.split("");
 let upperArray = upperString.split("");
 
-
+    
 
 let passwordArray = [];
 let confirmLength = prompt("how many characters would you like your password to contain? Please enter a number from 8-128.")
