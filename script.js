@@ -20,17 +20,20 @@ let upperArray = upperString.split("");
 
 let passwordArray = [];
 let confirmLength = prompt("how many characters would you like your password to contain? Please enter a number from 8-128.")
+if (confirmLength < 8 || confirmLength > 128 || isNaN(confirmLength)) {
+  alert("please enter a value from 8-128") 
+  return writePassword()
+};
 let confirmSymbols = confirm("Click OK if you want to include symbols, otherwise click cancel");
 let confirmDigits = confirm("Click OK if you want to include numbers/digits, otherwise click cancel")
 let confirmLower = confirm("Click OK if you want to include lowercase letters , otherwise click cancel");
 let confirmUpper = confirm("Click OK if you want to include uppercase letters, otherwise click cancel");
 
-// if (confirmLength <8 || confirmLength>128){alert("please enter a value from 8-128")};
 
 if (confirmSymbols === true){
-passwordArray = passwordArray.concat(symbolsArray)};
-if (confirmDigits === true){
-passwordArray = passwordArray.concat(digitsArray)};
+  passwordArray = passwordArray.concat(symbolsArray)};
+  if (confirmDigits === true){
+    passwordArray = passwordArray.concat(digitsArray)};
 if (confirmLower === true){
 passwordArray = passwordArray.concat(lowerArray)};
 if (confirmUpper === true){
